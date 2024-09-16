@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('SonarQube Analysis') {
+            steps {
+                dir('CartMS') {
+                    bat 'mvn verify'
+                }
+            }
+        }
+
+        stage('Build') {
+            steps {
+                script {
+                    // Read properties from application.yml
+                    def props = readProperties file: 'src/main/resources/application.yml'
+                    def portNumber = props.get('server.port')
+
+                    // Read Maven POM file
+                    def pom = readMavenPom file: 'CartMS/pom.xml'
+                    def finalName = pom.build.finalName
+
+                    // Correct the escaping of batch file paths
+                    bat "C:\\Jenkins\\BatchFiles\\Kill_Process.bat ${portNumber}"
+
+                    // Run Maven build
+                    dir('CartMS') {
+                        bat 'mvn clean install'
+                    }
+
+                    // Correct the escaping of batch file paths
+                    bat "C:\\Jenkins\\BatchFiles\\Deploy_Maven.bat ${env.JOB_NAME} ${finalName}"
+                }
+            }
+        }
+    }
+}

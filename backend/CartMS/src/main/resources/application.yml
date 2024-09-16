@@ -1,0 +1,29 @@
+server:
+  port: 5001
+
+spring: 
+  datasource: 
+    driverClassName: com.mysql.cj.jdbc.Driver 
+    url: jdbc:mysql://localhost:3306/epharma_cart?autoReconnect=true&useSSL=false
+    username: root
+    password: root
+  jpa: 
+    hibernate.ddl-auto: update
+  application:
+    name: CartMS
+  cloud:
+    consul:
+      host: localhost
+      discovery:
+        hostname: localhost
+      config:
+        fail-fast: false
+        enabled: true
+        prefix: config
+        defaultContext: application
+        data-key: data
+        profileSeparator: '::'
+        format: YAML
+
+Cart:
+  ITEM_NOT_FOUND: cart item not found
