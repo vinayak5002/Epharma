@@ -1,0 +1,26 @@
+server:
+  port: 5004
+
+spring: 
+  datasource: 
+    driverClassName: com.mysql.cj.jdbc.Driver 
+    url: jdbc:mysql://localhost/epharma_order?autoReconnect=true&useSSL=false
+    username: root
+    password: root
+  jpa: 
+    hibernate.ddl-auto: update
+  application:
+    name: OrderMS
+  cloud:
+    consul:
+      host: localhost
+      discovery:
+        hostname: localhost
+      config:
+        fail-fast: false
+        enabled: true
+        prefix: config
+        defaultContext: application
+        data-key: data
+        profileSeparator: '::'
+        format: YAML

@@ -1,0 +1,26 @@
+server:
+  port: 5003
+
+spring: 
+  datasource: 
+    driverClassName: com.mysql.cj.jdbc.Driver 
+    url: jdbc:mysql://localhost/epharma_medicine?autoReconnect=true&useSSL=false
+    username: root
+    password: root
+  jpa: 
+    hibernate.ddl-auto: update
+  application:
+    name: MedicineMS
+  cloud:
+    consul:
+      host: localhost
+      discovery:
+        hostname: localhost
+      config:
+        fail-fast: false
+        enabled: true
+        prefix: config
+        defaultContext: application
+        data-key: data
+        profileSeparator: '::'
+        format: YAML
