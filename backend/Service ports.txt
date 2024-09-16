@@ -1,0 +1,9 @@
+Service ports
+
+GateMS      :5000
+
+CartMS      : 5001
+CutomerMS   : 5002
+MedicineMS  : 5003
+OrderMS     : 5004
+PaymentMS   : 5005
