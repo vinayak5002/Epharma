@@ -1,0 +1,43 @@
+{
+  "userdata": [
+    {
+      "id": "0df0"
+    },
+    {
+      "id": "3ce1",
+      "customerName": "adesh sengar",
+      "customerEmailId": "xcxzc@gmai.com",
+      "mobileNcontactNumberumber": "70000000000",
+      "gender": "male",
+      "dateOfBirth": "2024-09-20",
+      "password": "123"
+    },
+    {
+      "id": "c5e7",
+      "customerName": "adesh sengar",
+      "customerEmailId": "xcxzc@gmai.com",
+      "mobileNcontactNumberumber": "70000000000",
+      "gender": "male",
+      "dateOfBirth": "2024-09-06",
+      "password": "123"
+    },
+    {
+      "id": "cb07",
+      "customerName": "adesh sengar",
+      "customerEmailId": "xcxzc@gmai.com",
+      "mobileNcontactNumberumber": "70000000000",
+      "gender": "male",
+      "dateOfBirth": "2024-09-13",
+      "password": "123"
+    },
+    {
+      "id": "8cb8",
+      "customerName": "adesh sengar",
+      "customerEmailId": "xcxzc@gmai.com",
+      "mobileNcontactNumberumber": "70000000000",
+      "gender": "male",
+      "dateOfBirth": "2024-09-12",
+      "password": "123"
+    }
+  ]
+}

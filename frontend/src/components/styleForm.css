@@ -1,0 +1,80 @@
+/* FormStyles.css */
+
+.form-container {
+    background-image: url('path/to/your/background-image.jpg'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border: 2px solid #ddd; /* Border color */
+  }
+  
+  .form-container .d-flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .form-container label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .form-container input[type="email"],
+  .form-container input[type="password"] {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1; /* Make input take available space */
+  }
+  
+  .form-container .password-input-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .form-container button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px; /* Space between buttons */
+  }
+  
+  .form-container button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  .form-container .btn-danger {
+    color: white;
+    background-color: #dc3545;
+    border: 1px solid #dc3545;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .form-container p {
+    margin: 20px 0;
+  }
+  
+  .form-container a {
+    color: white; /* Ensure the link text is visible on the background */
+    text-decoration: none;
+  }
+  
+  .form-container a:hover {
+    text-decoration: underline;
+  }
+  
